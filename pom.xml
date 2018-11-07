@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ifpb</groupId>
-    <artifactId>Pw1-Plataforma-de-Video</artifactId>
+    <artifactId>ProjetoPW1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -14,6 +14,8 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
         </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/jstl/jstl -->
         <dependency>
             <groupId>jstl</groupId>
@@ -21,4 +23,5 @@
             <version>1.2</version>
         </dependency>
     </dependencies>
+
 </project>
