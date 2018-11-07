@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Pw1-Plataforma-de-Video:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Pw1_Plataforma_de_Video_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Pw1-Plataforma-de-Video/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Pw1-Plataforma-de-Video" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

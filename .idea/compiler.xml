@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Pw1---Plataforma-de-Video" />
+        <module name="Pw1-Plataforma-de-Video" />
       </profile>
     </annotationProcessing>
   </component>

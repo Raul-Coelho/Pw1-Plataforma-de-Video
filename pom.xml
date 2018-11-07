@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ifpb</groupId>
-    <artifactId>ProjetoWeb1</artifactId>
+    <artifactId>Pw1-Plataforma-de-Video</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -21,8 +21,4 @@
             <version>1.2</version>
         </dependency>
     </dependencies>
-
-
-
-
 </project>
