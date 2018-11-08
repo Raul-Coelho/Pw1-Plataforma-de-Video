@@ -13,8 +13,15 @@
 <head>
     <title>Titulo</title>
 </head>
+<title>Exemplo usando JSTL</title>
+</head>
 <body>
-<c: forEACH begin="1" end="3"></c:>
-<h1>Teste</h1>
+<c:forEach begin="1" end="5">
+    <h2>Olha isso!</h2>
+</c:forEach>
+
+<h1>Olá ${nome}</h1>
+
+
 </body>
 </html>
