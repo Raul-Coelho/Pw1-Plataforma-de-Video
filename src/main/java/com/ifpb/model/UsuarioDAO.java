@@ -3,6 +3,7 @@ package com.ifpb.model;
 import com.ifpb.connect.Conexao;
 
 import java.sql.*;
+import java.util.List;
 
 public class UsuarioDAO {
 
@@ -87,9 +88,83 @@ public class UsuarioDAO {
         }catch (SQLException e){
             return null;
         }
-
-
     }
 
+    public List<Usuario> buscarByName(String nome){
+        String sql = "SELECT * FROM usuario WHERE nome = ?";
+        List<Usuario> usuarios = null;
+
+        try{
+            PreparedStatement st = connection.prepareStatement(sql);
+
+            st.setString(1, nome);
+            ResultSet resultado = st.executeQuery();
+
+            while(resultado.next()){
+                Usuario u = new Usuario(
+                        resultado.getInt("id"),
+                        resultado.getString("email"),
+                        resultado.getString("senha"),
+                        resultado.getString("nome"),
+                        resultado.getString("sexo"),
+                        resultado.getString("foto"),
+                        resultado.getString("rua"),
+                        resultado.getString("cidade"),
+                        resultado.getString("estado"),
+                        resultado.getString("cep"),
+                        resultado.getString("telefone")
+                );
+                usuarios.add(u);
+            }
+            return usuarios;
+        }catch (SQLException e){
+            return null;
+        }
+    }
+
+    public List<Usuario> listar(){
+        String sql = "SELECT * FROM usuario";
+        List<Usuario> usuarios = null;
+
+        try{
+            PreparedStatement st = connection.prepareStatement(sql);
+
+            ResultSet resultado = st.executeQuery();
+
+            while(resultado.next()){
+                Usuario u = new Usuario(
+                        resultado.getInt("id"),
+                        resultado.getString("email"),
+                        resultado.getString("senha"),
+                        resultado.getString("nome"),
+                        resultado.getString("sexo"),
+                        resultado.getString("foto"),
+                        resultado.getString("rua"),
+                        resultado.getString("cidade"),
+                        resultado.getString("estado"),
+                        resultado.getString("cep"),
+                        resultado.getString("telefone")
+                );
+                usuarios.add(u);
+            }
+            return usuarios;
+        }catch (SQLException e){
+            return null;
+        }
+    }
+
+
+    public boolean deletar(String email){
+        String sql = "DELETE FROM usuario WHERE email = ?";
+
+        try{
+            PreparedStatement st = connection.prepareStatement(sql);
+            st.setString(1, email);
+
+            return st.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
 
 }
