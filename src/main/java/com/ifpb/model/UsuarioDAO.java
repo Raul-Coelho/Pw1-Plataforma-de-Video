@@ -1,13 +1,12 @@
 package com.ifpb.model;
 
-import com.ifpb.connect.Conexao;
-
 import java.sql.*;
 import java.util.List;
 
 public class UsuarioDAO {
 
     private Connection connection;
+
 
     public boolean salvar(Usuario u){
         if(u.getId() == 0){
@@ -70,7 +69,7 @@ public class UsuarioDAO {
 
             if(resultado.next()){
                 Usuario u = new Usuario(
-                        resultado.getInt("id"),
+                        resultado.getString("id"),
                         resultado.getString("email"),
                         resultado.getString("senha"),
                         resultado.getString("nome"),
@@ -102,7 +101,7 @@ public class UsuarioDAO {
 
             while(resultado.next()){
                 Usuario u = new Usuario(
-                        resultado.getInt("id"),
+                        resultado.getString("id"),
                         resultado.getString("email"),
                         resultado.getString("senha"),
                         resultado.getString("nome"),
@@ -133,7 +132,7 @@ public class UsuarioDAO {
 
             while(resultado.next()){
                 Usuario u = new Usuario(
-                        resultado.getInt("id"),
+                        resultado.getString("id"),
                         resultado.getString("email"),
                         resultado.getString("senha"),
                         resultado.getString("nome"),

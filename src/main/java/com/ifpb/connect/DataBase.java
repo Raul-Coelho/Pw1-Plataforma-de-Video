@@ -9,7 +9,7 @@ public class DataBase {
     public DataBase(String url, String email, String senha) {
         this.url = "jdbc:postgresql://127.0.0.1:5432/IFchannelVideo";
         this.email = "postgres";
-        this.senha = "123";
+        this.senha = "coelho";
     }
 
     public String getUrl() {

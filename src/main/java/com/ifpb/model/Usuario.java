@@ -33,8 +33,7 @@ public class Usuario {
         this.numero = numero;
     }
 
-    public Usuario(int id, String email, String senha, String nome, String sexo, String foto, String rua, String cidade,
-                   String estado, String cep, String telefone) {
+    public Usuario(int id, String email, String senha, String nome, String sexo, String foto, String rua, String cidade, String estado, String cep, String telefone, String numero) {
         this.id = id;
         this.email = email;
         this.senha = senha;
