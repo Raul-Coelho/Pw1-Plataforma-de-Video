@@ -7,8 +7,8 @@ import java.sql.SQLException;
 
 public class Conexao {
     public static Connection getConnection(String url, String email, String senha) throws SQLException, ClassNotFoundException {
-        Connection con = null;
         Class.forName("org.postgresql.Driver");
+        Connection con = null;
         con = DriverManager.getConnection(url, email, senha);
         return con;
     }

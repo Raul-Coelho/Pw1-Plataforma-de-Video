@@ -20,6 +20,7 @@ public class SalvarUsuario implements Command {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException, ClassNotFoundException {
         HttpSession session = request.getSession();
 
+        String cSexo = "m";
 
         int id = 0;
         String nome = request.getParameter("nome");
@@ -33,7 +34,9 @@ public class SalvarUsuario implements Command {
         String cep = request.getParameter("cep");
         String telefone = request.getParameter("telefone");
        // Part part = request.getPart("foto");
-
+        if(sexo != "masculino"){
+            cSexo = "f";
+        }
         String img = "";
 
 //        byte[] foto = new byte[(int) part.getSize()];
@@ -45,15 +48,16 @@ public class SalvarUsuario implements Command {
 
         UsuarioService service = new UsuarioService();
 
-        if(service.salvar(id, email, senha, nome, sexo, img, rua, cidade, estado, cep, telefone, numero)){
+        if(service.salvar(id, email, senha, nome, cSexo, img, rua, cidade, estado, cep, telefone, numero)){
             response.setStatus(200);
         }else{
             response.setStatus(400);
             response.setHeader("ERROR", "Não foi possivel cadastrar o usuário");
         }
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("nome.jsp");
-        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher("nome.jsp").forward(request, response);
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("nome.jsp");
+//        requestDispatcher.forward(request, response);
 
     }
 }

@@ -1,6 +1,7 @@
 package com.ifpb.controller.servico;
 
 import com.ifpb.controller.connect.Conexao;
+import com.ifpb.controller.connect.ConnectionFactory;
 import com.ifpb.controller.factory.Factory;
 import com.ifpb.model.dao.UsuarioDao;
 import com.ifpb.model.entidades.Usuario;
@@ -10,13 +11,9 @@ import java.sql.SQLException;
 
 public class UsuarioService {
 
-    private FactoryDAO factory = null;
-    private UsuarioDao dao = null;
-
+    private UsuarioDao dao = new UsuarioDao();
 
     public UsuarioService() throws SQLException, ClassNotFoundException {
-        factory = Factory.createFactory();
-        dao = (UsuarioDao) factory.getDaoUsuario();
     }
 
 

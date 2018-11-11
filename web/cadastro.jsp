@@ -35,7 +35,7 @@
                     <tr>
                         <td><label class="labelform">Sexo </label></td>
                         <td>
-                            <select class="sexo">
+                            <select class="sexo" name="sexo">
                                 <option value="Masculino">Masculino</option>
                                 <option value="Feminino">Feminino</option>
                             </select>
