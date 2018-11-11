@@ -1,4 +1,4 @@
-package com.ifpb.model;
+package com.ifpb.model.entidades;
 
 public class Usuario {
 

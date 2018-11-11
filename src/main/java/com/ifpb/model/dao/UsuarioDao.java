@@ -1,14 +1,25 @@
-package com.ifpb.model;
+package com.ifpb.model.dao;
+
+import com.ifpb.controller.connect.Conexao;
+import com.ifpb.controller.connect.DataBase;
+import com.ifpb.model.entidades.Usuario;
 
 import java.sql.*;
 import java.util.List;
 
-public class UsuarioDAO {
+public class UsuarioDao implements com.ifpb.model.interfaces.UsuarioDAO {
 
+    private DataBase props;
     private Connection connection;
 
 
-    public boolean salvar(Usuario u){
+    public UsuarioDao() throws SQLException, ClassNotFoundException {
+        this.props = new DataBase();
+        this.connection = Conexao.getConnection(props.getUrl(),props.getEmail(),props.getSenha());
+
+    }
+
+    public boolean salvar(Usuario u) throws SQLException{
         if(u.getId() == 0){
             String sql = "INSERT INTO usuario(nome, email, senha, sexo, rua, estado, cidade, numero, cep, foto, " +
                     "telefone VALUES (?,?,?,?,?,?,?,?,?,?,?)";
@@ -89,7 +100,7 @@ public class UsuarioDAO {
         }
     }
 
-    public List<Usuario> buscarByName(String nome){
+    public List<Usuario> buscarByName(String nome) throws SQLException{
         String sql = "SELECT * FROM usuario WHERE nome = ?";
         List<Usuario> usuarios = null;
 
@@ -121,7 +132,7 @@ public class UsuarioDAO {
         }
     }
 
-    public List<Usuario> listar(){
+    public List<Usuario> listar() throws SQLException{
         String sql = "SELECT * FROM usuario";
         List<Usuario> usuarios = null;
 
@@ -153,7 +164,7 @@ public class UsuarioDAO {
     }
 
 
-    public boolean deletar(String email){
+    public boolean deletar(String email) throws SQLException{
         String sql = "DELETE FROM usuario WHERE email = ?";
 
         try{

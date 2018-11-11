@@ -1,4 +1,4 @@
-package com.ifpb.connect;
+package com.ifpb.controller.connect;
 
 public class DataBase {
     private String url;
@@ -6,10 +6,10 @@ public class DataBase {
     private String senha;
 
 
-    public DataBase(String url, String email, String senha) {
+    public DataBase() {
         this.url = "jdbc:postgresql://127.0.0.1:5432/IFchannelVideo";
         this.email = "postgres";
-        this.senha = "coelho";
+        this.senha = "123";
     }
 
     public String getUrl() {
