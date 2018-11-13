@@ -2,21 +2,15 @@ package com.ifpb.controller.command;
 
 import com.ifpb.controller.servico.UsuarioService;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.http.Part;
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.SQLException;
-import java.util.Base64;
-
 
 public class SalvarUsuario implements Command {
-
-
+    @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException, ClassNotFoundException {
         HttpSession session = request.getSession();
 
@@ -33,7 +27,7 @@ public class SalvarUsuario implements Command {
         String estado = request.getParameter("estado");
         String cep = request.getParameter("cep");
         String telefone = request.getParameter("telefone");
-       // Part part = request.getPart("foto");
+        // Part part = request.getPart("foto");
         if(sexo != "masculino"){
             cSexo = "f";
         }
@@ -44,7 +38,7 @@ public class SalvarUsuario implements Command {
 //        stream.read(foto);
 //        stream.close();
 
-   //     String fotoPerfil = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
+        //     String fotoPerfil = "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(foto);
 
         UsuarioService service = new UsuarioService();
 
@@ -55,9 +49,10 @@ public class SalvarUsuario implements Command {
             response.setHeader("ERROR", "Não foi possivel cadastrar o usuário");
         }
 
-        request.getRequestDispatcher("nome.jsp").forward(request, response);
+        request.getRequestDispatcher("index.html").forward(request, response);
 //        RequestDispatcher requestDispatcher = request.getRequestDispatcher("nome.jsp");
 //        requestDispatcher.forward(request, response);
 
     }
 }
+

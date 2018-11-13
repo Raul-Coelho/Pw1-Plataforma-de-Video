@@ -1,28 +1,28 @@
 package com.ifpb.model.dao;
 
-import com.ifpb.controller.connect.Conexao;
-import com.ifpb.controller.connect.ConnectionFactory;
-import com.ifpb.controller.connect.DataBase;
+import com.ifpb.conexao.ConnectionFactory;
 import com.ifpb.model.entidades.Usuario;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
-public class UsuarioDao implements com.ifpb.model.interfaces.UsuarioDAO {
+public class UsuarioDAO {
 
-   private ConnectionFactory factory;
+    private ConnectionFactory factory;
 
-
-    public UsuarioDao() throws SQLException, ClassNotFoundException {
+    public UsuarioDAO(){
         factory = new ConnectionFactory();
     }
 
     public boolean salvar(Usuario u) throws SQLException{
         if(u.getId() == 0){
             String sql = "INSERT INTO usuario(nome, email, senha, sexo, rua, estado, cidade, numero, cep, foto, " +
-                    "telefone VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+                    "telefone) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 
-            try(Connection connection = factory.getConnetion()){
+            try(Connection connection = factory.getConnection()){
                 PreparedStatement st = connection.prepareStatement(sql);
                 st.setString(1, u.getNome());
                 st.setString(2, u.getEmail() );
@@ -39,15 +39,17 @@ public class UsuarioDao implements com.ifpb.model.interfaces.UsuarioDAO {
                 return st.executeUpdate() > 0;
 
             } catch (SQLException e) {
+                System.out.println(e);
                 return false;
             } catch (ClassNotFoundException e) {
+                System.out.println(e);
                 return false;
             }
         }else{
 
-            String sql = "UPDATE usuario(nome, email, senha, sexo, rua, estado, cidade, numero, cep, foto, " +
-                    "                    telefone) set(?,?,?,?,?,?,?,?,?,?) WHERE id = ?";
-            try(Connection connection = factory.getConnetion()){
+            String sql = "UPDATE usuario set (nome, senha, sexo, rua, estado, cidade, numero, cep, foto, " +
+                    "telefone) = (?,?,?,?,?,?,?,?,?,?) WHERE id = ?";
+            try(Connection connection = factory.getConnection()){
                 PreparedStatement st = connection.prepareStatement(sql);
                 st.setString(1, u.getNome());
                 st.setString(2, u.getSenha());
@@ -60,11 +62,15 @@ public class UsuarioDao implements com.ifpb.model.interfaces.UsuarioDAO {
                 st.setString(9, u.getFoto());
                 st.setString(10, u.getTelefone());
 
+                st.setInt(11, u.getId());
+
                 return st.executeUpdate() > 0;
 
             }catch (SQLException e){
+                System.out.println(e);
                 return false;
             } catch (ClassNotFoundException e) {
+                System.out.println(e);
                 return false;
             }
         }
@@ -74,7 +80,7 @@ public class UsuarioDao implements com.ifpb.model.interfaces.UsuarioDAO {
     public Usuario buscarById(int id) throws SQLException {
         String sql = "SELECT * FROM usuario WHERE id = ?";
 
-        try(Connection connection = factory.getConnetion()){
+        try(Connection connection = factory.getConnection()){
             PreparedStatement st = connection.prepareStatement(sql);
 
             st.setInt(1, id);
@@ -108,7 +114,7 @@ public class UsuarioDao implements com.ifpb.model.interfaces.UsuarioDAO {
         String sql = "SELECT * FROM usuario WHERE nome = ?";
         List<Usuario> usuarios = null;
 
-        try(Connection connection = factory.getConnetion()){
+        try(Connection connection = factory.getConnection()){
             PreparedStatement st = connection.prepareStatement(sql);
 
             st.setString(1, nome);
@@ -142,7 +148,7 @@ public class UsuarioDao implements com.ifpb.model.interfaces.UsuarioDAO {
         String sql = "SELECT * FROM usuario";
         List<Usuario> usuarios = null;
 
-        try(Connection connection = factory.getConnetion()){
+        try(Connection connection = factory.getConnection()){
             PreparedStatement st = connection.prepareStatement(sql);
 
             ResultSet resultado = st.executeQuery();
@@ -175,7 +181,7 @@ public class UsuarioDao implements com.ifpb.model.interfaces.UsuarioDAO {
     public boolean deletar(String email) throws SQLException {
         String sql = "DELETE FROM usuario WHERE email = ?";
 
-        try (Connection connection = factory.getConnetion()) {
+        try (Connection connection = factory.getConnection()) {
             PreparedStatement st = connection.prepareStatement(sql);
             st.setString(1, email);
 

@@ -1,21 +1,15 @@
 package com.ifpb.controller.servico;
 
-import com.ifpb.controller.connect.Conexao;
-import com.ifpb.controller.connect.ConnectionFactory;
-import com.ifpb.controller.factory.Factory;
-import com.ifpb.model.dao.UsuarioDao;
+import com.ifpb.model.dao.UsuarioDAO;
 import com.ifpb.model.entidades.Usuario;
-import com.ifpb.model.interfaces.FactoryDAO;
 
 import java.sql.SQLException;
 
 public class UsuarioService {
-
-    private UsuarioDao dao = new UsuarioDao();
+    private UsuarioDAO dao = new UsuarioDAO();
 
     public UsuarioService() throws SQLException, ClassNotFoundException {
     }
-
 
     public boolean salvar(int id, String email, String senha, String nome, String sexo, String foto, String rua,
                           String cidade, String estado, String cep, String telefone, String numero) throws SQLException {
