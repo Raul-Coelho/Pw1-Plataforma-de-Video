@@ -13,10 +13,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/Teste_Web_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/conexao/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/conexao/ConnectionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/controller/servico/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/controller/servico/UsuarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/model/dao/UsuarioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/model/dao/UsuarioDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ifpb/view/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ifpb/view/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/conexao/ConnectionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifpb/conexao/ConnectionFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/controller/servico/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifpb/controller/servico/UsuarioService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/model/dao/UsuarioDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifpb/model/dao/UsuarioDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ifpb/view/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ifpb/view/App.class" afterDir="false" />
@@ -73,8 +75,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="221">
+              <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -92,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/view/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -133,6 +135,7 @@
   <component name="FindInProjectRecents">
     <dirStrings>
       <dir>C:\Users\Lucas\Desktop\Teste\src\main\java</dir>
+      <dir>C:\Users\Raul Coelho\Documents\ADS\P4\PW1\Pw1-Plataforma-de-Video\web</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -151,12 +154,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/controle/command/SalvarUsuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/controle/FrontController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/controller/FrontController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/controller/command/SalvarUsuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/controller/servico/UsuarioService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/view/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/model/dao/UsuarioDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ifpb/conexao/ConnectionFactory.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -201,78 +204,6 @@
             <path>
               <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ifpb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ifpb" type="462c0819:PsiDirectoryNode" />
-              <item name="conexao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ifpb" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ifpb" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ifpb" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="entidades" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pw1-Plataforma-de-Video" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ifpb" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pw1-Plataforma-de-Video" type="b2602c69:ProjectViewProjectNode" />
@@ -419,12 +350,12 @@
       <updated>1542048612016</updated>
       <workItem from="1542048617964" duration="4528000" />
       <workItem from="1542060957654" duration="3048000" />
-      <workItem from="1542105097387" duration="1350000" />
+      <workItem from="1542105097387" duration="1827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8926000" />
+    <option name="totallyTimeSpent" value="9403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -453,6 +384,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532943" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -460,7 +392,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +483,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ifpb/view/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -572,8 +503,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="221">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
         </state>
       </provider>
     </entry>
