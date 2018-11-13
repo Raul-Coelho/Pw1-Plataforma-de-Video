@@ -13,7 +13,7 @@ public class ConnectionFactory {
 
         String url = "jdbc:postgresql://localhost:5432/ifchannel";
         String usuario = "postgres";
-        String senha = "123";
+        String senha = "coelho'";
 
         return DriverManager.getConnection(url, usuario, senha);
 

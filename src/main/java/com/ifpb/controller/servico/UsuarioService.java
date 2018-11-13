@@ -1,12 +1,12 @@
 package com.ifpb.controller.servico;
 
-import com.ifpb.model.dao.UsuarioDAO;
+import com.ifpb.model.dao.UsuarioDao;
 import com.ifpb.model.entidades.Usuario;
 
 import java.sql.SQLException;
 
 public class UsuarioService {
-    private UsuarioDAO dao = new UsuarioDAO();
+    private UsuarioDao dao = new UsuarioDao();
 
     public UsuarioService() throws SQLException, ClassNotFoundException {
     }
